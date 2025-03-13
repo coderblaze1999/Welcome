@@ -1,10 +1,145 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Welcome to CoderBlaze</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoderBlaze - Tech Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background: #222;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .hero {
+            background: linear-gradient(to right, #007bff, #6610f2);
+            color: white;
+            padding: 100px 20px;
+        }
+        .btn {
+            background: white;
+            color: #007bff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        section {
+            padding: 50px 20px;
+        }
+        .services ul {
+            list-style: none;
+            padding: 0;
+        }
+        .services ul li {
+            background: #f4f4f4;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: auto;
+        }
+        .contact input, .contact textarea {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact button {
+            background: #007bff;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        footer {
+            background: #222;
+            color: white;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to CoderBlaze!</h1>
-    <p>More coming soon...</p>
+    <header>
+        <h1>CoderBlaze</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <h2>Innovate. Build. Scale.</h2>
+        <p>Your trusted partner in cutting-edge tech solutions.</p>
+        <a href="#contact" class="btn">Get in Touch</a>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>We are a service-based tech company offering software development, cloud solutions, and IT consulting.</p>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>🔹 Custom Software Development</li>
+            <li>🔹 Cloud & DevOps Solutions</li>
+            <li>🔹 AI & Data Analytics</li>
+            <li>🔹 IT Consulting & Support</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 CoderBlaze. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Thank you! Your message has been received.");
+            document.getElementById("contactForm").reset();
+        });
+    </script>
 </body>
 </html>
